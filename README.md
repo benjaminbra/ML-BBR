@@ -1,5 +1,7 @@
 # Machine Learning
 
+Benjamin Brasseur
+
 Jour 1 (Pré-requis) :
 Pandas
 
@@ -10,7 +12,7 @@ Jour 3 :
 Régressions Logistic
 
 - OvO (One versus One)
-- OvA (One verse All)
+- OvA (One verse All) (Pas encore pratiqué)
 
 Jour 4 : 
 Taylor
