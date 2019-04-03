@@ -16,3 +16,6 @@ Régressions Logistic
 
 Jour 4 : 
 Taylor
+
+Jour 5 : 
+TD-IDF
