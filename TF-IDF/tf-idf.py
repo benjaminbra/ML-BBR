@@ -45,11 +45,13 @@ recommendations = {}
 for index, document in enumerate(x.toarray()):
     # Pour chaque document, on va calculer la "compatibilité" avec les documents de tests
     for index_test, doc_test in enumerate(test_documents):
-        # Création de la matrice creuse pour le document de test qui va être comparé
-        diff_doc = tfidfvectorizer.transform(doc_test)
-        if test_noms[index_test] not in recommendations:
-            recommendations[test_noms[index_test]] = {}
-        recommendations[test_noms[index_test]][index] = cosine_similarity(document,diff_doc)
+        # On vérifie que le fichier que l'on compare n'est pas le même que le document initial
+        if test_noms[index_test] != noms[index]:
+            # Création de la matrice creuse pour le document de test qui va être comparé
+            diff_doc = tfidfvectorizer.transform(doc_test)
+            if test_noms[index_test] not in recommendations:
+                recommendations[test_noms[index_test]] = {}
+            recommendations[test_noms[index_test]][index] = cosine_similarity(document,diff_doc)
 
 for key,value in recommendations.items():
     # Affiche les 5 fichiers ayant le plus de ressemblances pour chaque fichier testés
