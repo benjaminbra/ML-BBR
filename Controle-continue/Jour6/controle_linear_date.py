@@ -26,9 +26,11 @@ def calctetacost(t_0, t_1, pts):
     points = pts
     points_size = points.__len__()
     min_cost = None
+    min_teta_0 = None
+    min_teta_1 = None
 
-    for step in range(1, 300000):
-        alpha = 1 / step
+    for step in range(1, 2000000):
+        alpha = 1 / 10000000 / step
         next_0 = teta_0 - (alpha / points_size) * (somme_teta(teta_0, teta_1, points, points_size, 0, 0))
         next_1 = teta_1 - (alpha / points_size) * (somme_teta(teta_0, teta_1, points, points_size, 1, 0))
         teta_0 = next_0
@@ -36,10 +38,12 @@ def calctetacost(t_0, t_1, pts):
 
         cost = (1 / (points_size * 2)) * (somme_teta(teta_0, teta_1, points, points_size, 0, 1))
 
-        if min_cost == None or cost < min_cost:
+        if min_cost is None or cost < min_cost:
+            min_teta_0 = teta_0
+            min_teta_1 = teta_1
             min_cost = cost
 
-    return {'teta0':teta_0, 'teta1':teta_1, 'cost': cost}
+    return {'teta0': min_teta_0, 'teta1': min_teta_1, 'cost': min_cost}
 
 # Jeux de données
 # Dans un soucis de simplicité, on va transformer les dates en nombres simples
