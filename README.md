@@ -19,3 +19,6 @@ Taylor
 
 Jour 5 : 
 TD-IDF
+
+Jour 6/7 :
+[TP_CART](./TP_CART)
