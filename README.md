@@ -2,23 +2,38 @@
 
 Benjamin Brasseur
 
-Jour 1 (Pré-requis) :
-Pandas
+## Jour 1 (Pré-requis)
+Exercice d'entrainement avec Pandas
 
-Jour 2 :
-Régression Linéaire
+Voir [Pandas](./Pandas)
 
-Jour 3 : 
-Régressions Logistic
+## Jour 2
+Mise en pratique de la régression linéaire
+
+Voir [Régression Linéaire](./Linear)
+
+## Jour 3
+Voir [Régressions Logistic](./Logistic)
 
 - OvO (One versus One)
 - OvA (One verse All) (Pas encore pratiqué)
 
-Jour 4 : 
-Taylor
+## Jour 4
+Mise en pratique de la dérivée de Taylor
 
-Jour 5 : 
-TD-IDF
+Voir [Taylor](./Taylor)
 
-Jour 6/7 :
-[TP_CART](./TP_CART)
+## Jour 5
+Mise en pratique du TP TD-IDF avec movielens
+
+Voir [TD-IDF](./TF-IDF)
+
+## Jour 6/7
+Comparaison des différentes techniques en performance et précision
+
+Voir [TP_CART](./TP_CART)
+
+## Jour 8
+Création d'un Réseau Neuronnal afin de prédire la valeur d'un chiffre manuscrit.
+
+Voir [TP_Perceptron](./TP_Perceptron)
