@@ -44,15 +44,19 @@ def calctetacost(t_0,t_1,pts):
 	print(teta_1)
 	print(min_cost)
 
-	plt.close()
-	plt1 = plt.subplot(211)
-	x,y = [elem[0] for elem in points],[elem[1] for elem in points]
-	plt1.scatter(x,y)
-	plot = np.arange(1,4,1)
-	y_chapeau = [h_teta(teta_0,teta_1,elem[0]) for elem in points]
-	plt1.plot(plot, y_chapeau)		
+	return [teta_0,teta_1,points]
 
+def display_result(teta_0, teta_1, points):
+	plt.close()
+	plt.subplot(211)
+	x,y = [elem[0] for elem in points], [elem[1] for elem in points]
+	plt.scatter(x,y)
+	y = [h_teta(teta_0,teta_1, elem) for elem in x]
+	plt.plot(x,y)
+	
 	plt.show()
 
-#calctetacost(1,1,[[10,4],[1,5],[2,3]])
-calctetacost(1,1,[[13,13],[2,2],[5,18]])
+result = calctetacost(1,1,[[10,4],[1,5],[2,3]])
+display_result(result[0],result[1],result[2])
+
+#calctetacost(1,1,[[13,13],[2,2],[5,18]])
