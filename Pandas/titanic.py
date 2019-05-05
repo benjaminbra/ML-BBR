@@ -42,10 +42,6 @@ p3 = plt.subplot(223)
 p3.bar(aliveState, aliveStateValue)
 p3.set_title('Différence prix survivant/mort (en £1000)')
 
-p4 = plt.subplot(224)
-p4.bar(aliveState, aliveStateValue)
-p4.set_title('Différence prix survivant/mort (en £1000)')
-
 
 # Affichage des graphiques
 
